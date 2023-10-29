@@ -1,0 +1,141 @@
+/* Resets */
+:root {
+  /*Primary-color*/
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral-colors */
+
+  /* paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.9375rem;
+  color: var(--transparent-white);
+  background: var(--very-light-gray);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* Utility classes */
+.container {
+  width: min(89%, 910px);
+  margin-inline: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Desktop Styles */
+.card-container {
+  display: flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card {
+  padding: 3rem;
+}
+
+.card h2 {
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.card p {
+  margin-top: 2rem;
+  line-height: 1.5em;
+}
+
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  margin-top: 5rem;
+  color: transparent;
+  background-color: var(--very-light-gray);
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card a:active,
+.card a:hover {
+  background-color: transparent;
+  outline: 2px solid var(--transparent-white);
+  color: var(--transparent-white);
+}
+
+.card-sedans {
+  background-color: var(--bright-orange);
+}
+
+.card-sedans a {
+  color: var(--bright-orange);
+}
+
+.card-suvs {
+  background-color: var(--dark-cyan);
+}
+
+.card-suvs a {
+  color: var(--dark-cyan);
+}
+
+.card-luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.card-luxury a {
+  color: var(--very-dark-cyan);
+}
+
+/* Mobile and Tablet */
+@media (max-width: 986px) {
+  body {
+    height: 100%;
+    padding-block: 5rem;
+  }
+
+  .container {
+    width: min(89%, 360px);
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card a {
+    margin-top: 2rem;
+  }
+}
